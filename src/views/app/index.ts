@@ -52,7 +52,6 @@ export default class App extends Vue {
     }
     this.showNav(to.path);
   }
-
   private showNav(path: string) {
     /** 隐藏头部导航的路由 */
     const noHeaderPath = ['/login', '/register'];
