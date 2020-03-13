@@ -1,0 +1,26 @@
+.header {
+  background: url('../../assets/images/time.jpg') no-repeat #f4f4f4;
+  background-size: 100% 100%;
+  padding: 20px 16px;
+  display: flex;
+  align-items: center;
+  height: 150px;
+
+  .user-info {
+    text-align: center;
+    font-size: 16px;
+    margin-left: 10px;
+    p {
+      margin: 0;
+    }
+  }
+}
+.user-list {
+  margin: 10px 0;
+  .icon {
+    color: rgb(47, 64, 86);
+  }
+  .custom-title {
+    margin-left: 5px;
+  }
+}

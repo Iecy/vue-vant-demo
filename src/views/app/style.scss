@@ -1,0 +1,54 @@
+#app {
+  color: #2c3e50;
+  height: 100vh;
+}
+#nav a {
+  font-size: 24px;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+#nav a.router-link-exact-active {
+  color: #42b983;
+}
+
+.global-header-nav {
+  background: #42b983;
+  .van-nav-bar__title {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 600;
+  }
+}
+
+/* 路由切换动画 */
+.slide-left-enter-active,
+.slide-left-leave-active,
+.slide-right-enter-active,
+.slide-right-leave-active {
+  transition: all 0.2s ease-out;
+}
+
+.slide-left-enter-active,
+.slide-right-enter-active {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.slide-right-enter {
+  transform: translate(-100%);
+}
+
+.slide-right-leave-to {
+  transform: translate(100%);
+}
+
+.slide-left-enter {
+  transform: translate(100%);
+}
+
+.slide-left-leave-to {
+  transform: translate(-100%);
+}

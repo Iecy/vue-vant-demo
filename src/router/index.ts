@@ -33,4 +33,21 @@ const router = new Router({
   routes,
 });
 
+router.beforeEach((to, form, next) => {
+  if (to.meta.auth) {
+    // 需要登录
+    const token = localStorage.getItem('token');
+    if (token) {
+      next();
+    } else {
+      next({
+        path: '/login',
+        query: { redirect: to.path },
+      });
+    }
+  } else { // 不需要登录验证
+    next();
+  }
+});
+
 export default router;

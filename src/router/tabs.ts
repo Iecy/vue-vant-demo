@@ -14,6 +14,7 @@ const tabRoutes: RouteConfig[] = [
     component: () => import('@/views/list/index.vue'),
     meta: {
       index: 2,
+      auth: true,
     },
   }, {
     path: '/user-center',
@@ -21,6 +22,7 @@ const tabRoutes: RouteConfig[] = [
     component: () => import('@/views/user-center/index.vue'),
     meta: {
       index: 3,
+      auth: true,
     },
   },
 ];
