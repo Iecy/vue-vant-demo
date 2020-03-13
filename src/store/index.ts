@@ -1,16 +1,21 @@
 import Vue from 'vue';
-import Vuex from 'vuex';
+import Vuex, { StoreOptions } from 'vuex';
+
+import { RootState } from './interfaces';
+
+import getters from './getters';
+
+import tabs from './tabs';
 
 Vue.use(Vuex);
+const debug = process.env.NODE_ENV !== 'production';
 
-export default new Vuex.Store({
-  state: {
-
+const store: StoreOptions<RootState> = {
+  modules: {
+    tabs,
   },
-  mutations: {
+  getters,
+  strict: debug,
+};
 
-  },
-  actions: {
-
-  },
-});
+export default new Vuex.Store<RootState>(store);
